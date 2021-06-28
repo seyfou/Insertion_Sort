@@ -1,0 +1,25 @@
+
+FUNCTION insertionSort(arr, n) : 
+VAR
+   i, key, j : INTEGER;
+BEGIN
+    FOR i FROM 1 TO n STEP 1  DO
+        key = arr[i];
+        j = i-1;
+         WHILE (j >= 0 && arr[j]> key) DO
+             arr[j + 1] = arr[j];  
+            j = j - 1;  
+         END_WHILE
+         arr[j + 1] = key;  
+    END_FOR
+    RETURN arr ;
+END 
+
+ALGORITHM inertionsort 
+VAR
+    arr:ARRAY_OF INTEGER;
+    n:=arr.length;
+BEGIN
+    insertionSort(arr, n); 
+END
+
